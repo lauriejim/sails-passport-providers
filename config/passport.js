@@ -43,32 +43,32 @@ module.exports = {
     customMiddleware: function(app) {
 
       passport.use(new GitHubStrategy({
-          clientID: "19d7d8d531390cea8ab5",
-          clientSecret: "65faada2ecbcfd14bfbab6a8613b1993111afdfb",
+          clientID: "CLIENT_KEY",
+          clientSecret: "SECRET_KEY",
           callbackURL: "/provider/github"
         },
         verifyHandler
       ));
 
       passport.use(new FacebookStrategy({
-          clientID: "263123383840687",
-          clientSecret: "e8a685792b8d2d4e89155a2f037be53f",
+          clientID: "CLIENT_KEY",
+          clientSecret: "SECRET_KEY",
           callbackURL: "/provider/facebook"
         },
         verifyHandler
       ));
 
       passport.use(new TwitterStrategy({
-          consumerKey: "0bcwIeF7o4ZJOx8pkL3p5XCts",
-          consumerSecret: "A5FYTBZHfZtHACZIPlfbRoG3yNeftVx8n1M7NTpFx1AZjLS8hn",
+          consumerKey: "CLIENT_KEY",
+          consumerSecret: "SECRET_KEY",
           callbackURL: "/provider/twitter"
         },
         verifyHandler
       ));
 
       // passport.use(new LinkedInStrategy({
-      //     consumerKey: "77abe27z93ey62",
-      //     consumerSecret: "dLGBDGOzNWQum9lR",
+      //     consumerKey: "CLIENT_KEY",
+      //     consumerSecret: "SECRET_KEY",
       //     callbackURL: "/provider/linkedin"
       //   },
       //   verifyHandler
