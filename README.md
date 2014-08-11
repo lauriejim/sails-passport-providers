@@ -17,6 +17,7 @@ $ sails lift
 ### Add your favorite providers
 
 Realy easy to add your favorite provider, in `config/passport.js` you can add your provider settings.
+
 1.  Create app on your provider site
 2.  Install the provider passport node module
 3.  Create provider strategie
