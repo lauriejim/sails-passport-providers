@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+  .row-sm-offset-3 div:first-child[class*="col-"] {
+    margin-left: 25%;
+  }
+}
+.authTitle {
+  text-align: center;
+  line-height: 300%;
+}
+.socialButtons a {
+  color: white;
+  opacity:0.9;
+}
+.socialButtons a:hover {
+  color: white;
+  opacity:1;
+}
+
+.btn-facebook, .btn-facebook-linked, .btn-facebook-nolinked:hover {background: #3b5998;}
+.btn-facebook-linked:hover, .btn-facebook-nolinked {background: #cccccc;}
+
+.btn-twitter, .btn-twitter-linked, .btn-twitter-nolinked:hover {background: #00aced;}
+.btn-twitter-linked:hover, .btn-twitter-nolinked {background: #cccccc;}
+
+.btn-linkedin, .btn-linkedin-linked, .btn-linkedin-nolinked:hover {background: #0e76a8;}
+.btn-linkedin-linked:hover, .btn-linkedin-nolinked {background: #cccccc;}
+
+.btn-google {background: #c32f10;}
+
+.btn-github, .btn-github-linked, .btn-github-nolinked:hover {background: #333333;}
+.btn-github-linked:hover, .btn-github-nolinked {background: #cccccc;}
+
+.loginOr {
+  position: relative;
+  font-size: 1.5em;
+  color: #aaa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.hrOr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.spanOr {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.6em;
+  margin-left: -1.5em;
+  background-color: #ffffff;
+  width: 3em;
+  text-align: center;
+}     
+
+.input-group.i {
+  width: 2em;
+}
+.help-block {
+  color: red;
+}
+@media (min-width: 768px) {
+  .forgotPwd {
+    text-align: right;
+    margin-top:10px;
+  }
+}

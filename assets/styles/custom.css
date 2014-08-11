@@ -1,0 +1,51 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.container .jumbotron {
+  text-align: center;
+}
+
+.jumbotron h2 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: gray;
+}
+
+.container .gray {
+  color: #ececec;
+}
+
+.container .footer {
+  width: 25%;
+}
+
+.bg-gray {
+  background-color: #ececec;
+}
+
+.form-signin {
+  height: 100%;
+  border: 0;
+  padding-bottom: 90px;
+}
+
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.social {
+  margin-top: 15px !important;
+}
+
+.social:hover {
+  color: white;
+}

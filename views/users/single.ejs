@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row well">
+    <div class="col-md-6 profile-infos">
+      <h2>Profiles informations</h2>
+      <form action="/user/update" method="POST">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" name="name" placeholder="name" value="<%= req.session.user.name %>">
+        </div>
+        <span class="help-block"></span>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <input type="text" class="form-control" name="email" placeholder="email address" value="<%= req.session.user.email %>">
+        </div>
+        <span class="help-block"></span>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <input  type="password" class="form-control" name="password" placeholder="Change password">
+        </div>
+        <span class="help-block"></span>
+        <input type="hidden" name="_csrf" value="<%= _csrf %>">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+      </form>
+      <div class="bs-callout bs-callout-warning">
+        <h4>Warning !</h4>
+        <p>Becarefull, if you delete your account, it's definitive !</p>
+        <form action="/user/destroy" method="POST">
+          <input type="hidden" name="_csrf" value="<%= _csrf %>">
+          <button class="btn btn-lg btn-danger btn-block" type="submit">Delete account</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6 profile-infos">
+      <h2>Link accounts</h2>
+      <div class="row socialButtons mrgT10">
+        <div class="col-md-4 col-sm-2">
+          <% if (req.session.user.providers.facebook) { %>
+            <a href="/user/unlink/facebook" class="btn btn-lg btn-block btn-facebook-linked">
+          <% } else { %>
+            <a href="/user/link/facebook" class="btn btn-lg btn-block btn-facebook-nolinked">
+          <% } %>
+            <i class="fa fa-facebook visible-xs"></i>
+            <span class="hidden-xs">Facebook</span>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-2">
+           <% if (req.session.user.providers.twitter) { %>
+            <a href="/user/unlink/twitter" class="btn btn-lg btn-block btn-twitter-linked">
+          <% } else { %>
+            <a href="/user/link/twitter" class="btn btn-lg btn-block btn-twitter-nolinked">
+          <% } %>
+            <i class="fa fa-twitter visible-xs"></i>
+            <span class="hidden-xs">Twitter</span>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-2">
+        <% if (req.session.user.providers.github) { %>
+            <a href="/user/unlink/github" class="btn btn-lg btn-block btn-github-linked">
+          <% } else { %>
+            <a href="/user/link/github" class="btn btn-lg btn-block btn-github-nolinked">
+          <% } %>
+            <i class="fa fa-github visible-xs"></i>
+            <span class="hidden-xs">Github</span>
+          </a>
+        </div>
+        <!--
+        <div class="col-md-4 col-sm-2">
+          <% if (req.session.user.providers.linkedin) { %>
+            <a href="/user/unlink/linkedin" class="btn btn-lg btn-block btn-linkedin-linked">
+          <% } else { %>
+            <a href="/user/link/linkedin" class="btn btn-lg btn-block btn-linkedin-nolinked">
+          <% } %>
+            <i class="fa fa-linkedin visible-xs"></i>
+            <span class="hidden-xs">Linked In</span>
+          </a>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
