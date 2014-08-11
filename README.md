@@ -9,17 +9,19 @@ In this case i create a link between basic user account and providers accounts
 
 ```shell
 $ git clone git@github.com:hack1337/sails-passport-providers.git
+$ cd sails-passport-providers
 $ npm install
+$ sails lift
 ```
 
 ### Add your favorite providers
 
 Realy easy to add your favorite provider, in `config/passport.js` you can add your provider settings.
-1. Create app on your provider site
-2. Install the provider passport node module
-3. Create provider strategie
-4. Configure the strategie
-5. Add the button on the view
+1.  Create app on your provider site
+2.  Install the provider passport node module
+3.  Create provider strategie
+4.  Configure the strategie
+5.  Add the button on the view
 
 You will find an exemple in `config/passport.js`
 
