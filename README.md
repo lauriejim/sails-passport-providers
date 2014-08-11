@@ -63,4 +63,3 @@ providerLogin: function(req, res) {
 
 > - Expand readme
 > - Correct my English :)
-
